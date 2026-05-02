@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sri Loganayaki Clear Filing Solutions - Elite GST, Tax, Audit, and Compliance services with 25+ years of expertise.">
+    <title>Sri Loganayaki | Financial Excellence & Strategic Filing</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* High-End Professional Palette */
+            --primary: #020617; /* Deepest Navy */
+            --primary-light: #1e293b;
+            --accent: #6366f1; /* Indigo */
+            --accent-soft: rgba(99, 102, 241, 0.1);
+            --secondary: #0ea5e9; /* Sky */
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-body: #fdfdfd;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05);
+            --shadow-lg: 0 30px 60px -12px rgba(0,0,0,0.1);
+            --radius-pill: 100px;
+            --radius-lg: 32px;
+            --radius-md: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Visual Depth Elements --- */
+        .mesh-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .mesh-blob {
+            position: absolute;
+            filter: blur(120px);
+            opacity: 0.4;
+            border-radius: 50%;
+            animation: drift 25s infinite alternate ease-in-out;
+        }
+
+        .blob-1 { width: 50vw; height: 50vw; background: var(--accent-soft); top: -10%; left: -10%; }
+        .blob-2 { width: 40vw; height: 40vw; background: #e0f2fe; bottom: -5%; right: -5%; animation-delay: -5s; }
+        .blob-3 { width: 30vw; height: 30vw; background: #f5f3ff; top: 40%; left: 30%; animation-delay: -10s; }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            100% { transform: translate(10%, 10%) scale(1.1) rotate(90deg); }
+        }
+
+        /* --- Navigation --- */
+        header {
+            position: fixed;
+            top: 1.5rem;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.6rem 1.5rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-pill);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-md);
+            width: calc(100% - 3rem);
+        }
+
+        header.scrolled .nav-inner {
+            padding: 0.5rem 1.2rem;
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .cta-btn {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 10px 20px -5px rgba(2, 6, 23, 0.3);
+        }
+
+        .cta-btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+        .menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; color: var(--primary); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 16rem 0 10rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 3rem;
+            border: 1px solid #f1f5f9;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            line-height: 0.9;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .hero h1 span {
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 0 auto 4rem;
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.4rem 3rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn-fill {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 25px 50px -12px rgba(2, 6, 23, 0.3);
+        }
+
+        .btn-fill:hover { transform: translateY(-8px); background: var(--accent); box-shadow: 0 30px 60px -15px rgba(99, 102, 241, 0.4); }
+
+        .btn-outline {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); background: #f8fafc; }
+
+        /* --- Sections General --- */
+        section { padding: 10rem 0; }
+
+        .section-tag {
+            text-align: center;
+            font-weight: 800;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 6rem;
+            color: var(--primary);
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 4rem 3.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 0;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .service-card:hover { transform: translateY(-15px); box-shadow: var(--shadow-lg); border-color: var(--accent-soft); }
+        .service-card:hover::before { height: 100%; }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon { background: var(--accent-soft); color: var(--accent); transform: scale(1.1) rotate(-10deg); }
+
+        .service-card h3 { font-size: 1.8rem; color: var(--primary); }
+        .service-card p { color: var(--text-muted); font-size: 1.05rem; }
+
+        /* --- About Section --- */
+        .about { background: #fff; }
+        .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 8rem; align-items: start; margin-bottom: 8rem; }
+        
+        .about-content h2 { font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 3rem; }
+        .about-content h2 span { color: var(--accent); }
+        .about-content p { margin-bottom: 2.5rem; color: var(--text-muted); font-size: 1.2rem; line-height: 1.8; }
+        
+        .experience-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 2.5rem;
+            background: #f8fafc;
+            border-radius: var(--radius-lg);
+            border-left: 6px solid var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .experience-badge .number { font-size: 4rem; font-weight: 800; color: var(--primary); font-family: 'Bricolage Grotesque'; line-height: 1; }
+        .experience-badge .text { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); line-height: 1.4; }
+        
+        .about-specialties {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 4rem;
+            border-radius: 48px;
+            box-shadow: 0 40px 80px -20px rgba(2, 6, 23, 0.4);
+        }
+        
+        .about-specialties h3 { font-size: 2.2rem; margin-bottom: 3rem; color: white; }
+        
+        .specialty-list { list-style: none; display: flex; flex-direction: column; gap: 2rem; }
+        .specialty-list li { 
+            display: flex; 
+            align-items: center; 
+            gap: 1.5rem; 
+            font-size: 1.1rem; 
+            font-weight: 500;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .specialty-list li span {
+            font-family: 'Bricolage Grotesque';
+            font-weight: 800;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+        
+        .about-mission {
+            background: #f1f5f9;
+            padding: 7rem 4rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+        
+        .mission-box { max-width: 900px; margin: 0 auto; }
+        .mission-box h3 { font-size: 3rem; margin-bottom: 2.5rem; color: var(--primary); }
+        .mission-box p { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 2rem; font-weight: 300; }
+        .mission-box p strong { color: var(--primary); font-weight: 700; }
+
+        /* --- Contact --- */
+        .contact-card {
+            background: var(--primary);
+            color: white;
+            border-radius: 48px;
+            padding: 8rem 4rem;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            box-shadow: 0 50px 100px -20px rgba(2, 6, 23, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card h2 { font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 2.5rem; }
+        .contact-card p { font-size: 1.4rem; opacity: 0.7; margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* --- Footer --- */
+        footer { padding: 8rem 0 4rem; background: #fff; border-top: 1px solid #f1f5f9; }
+        .footer-grid { display: grid; grid-template-columns: 2.5fr 1fr 1fr; gap: 6rem; margin-bottom: 6rem; }
+        .footer-col h4 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 2.5rem; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 1.2rem; }
+        .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 1.05rem; transition: var(--transition); }
+        .footer-col a:hover { color: var(--accent); transform: translateX(5px); display: inline-block; }
+        
+        .footer-bottom { border-top: 1px solid #f1f5f9; padding-top: 4rem; text-align: center; color: var(--text-muted); font-size: 0.95rem; }
+
+        /* --- Floating WhatsApp --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            width: 70px;
+            height: 70px;
+            background: #25d366;
+            color: white;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.1) translateY(-10px); }
+
+        /* --- Scroll Reveal --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Mobile Responsiveness Overhaul --- */
+        @media (max-width: 1200px) {
+            .container { padding: 0 4rem; }
+            .about-grid { gap: 4rem; }
+        }
+
+        @media (max-width: 992px) {
+            html { font-size: 15px; }
+            .container { padding: 0 2rem; }
+            .hero { padding-top: 14rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-inner { width: calc(100% - 2rem); }
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 100%; height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+                transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                z-index: 999;
+            }
+            .nav-links.active { right: 0; }
+            .menu-toggle { display: block; z-index: 1001; }
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .btn { width: 100%; justify-content: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .experience-badge { width: 100%; justify-content: center; }
+            .about-specialties { padding: 4rem 2rem; }
+            .section-title { font-size: 2.8rem; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="mesh-container">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <header id="header">
+        <div class="nav-inner">
+            <a href="#" class="logo">Loganayaki<span>.</span></a>
+            <div class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:9944876740" class="cta-btn">Talk to Expert</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </div>
+    </header>
+
+    <a href="https://wa.me/919944876740" class="whatsapp-float">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.656zm6.29-4.115c1.53.912 3.05 1.394 4.861 1.394 5.462 0 9.904-4.441 9.906-9.904.001-2.654-1.031-5.148-2.908-7.025-1.875-1.875-4.37-2.907-7.024-2.907-5.463 0-9.905 4.442-9.908 9.905-.001 1.928.553 3.42 1.547 4.981l-.997 3.645 3.723-.977zm11.233-7.531c-.301-.151-1.781-.878-2.057-.978-.275-.1-.476-.151-.675.151-.199.301-.776.978-.951 1.178-.175.199-.35.226-.651.075-.301-.151-1.272-.469-2.423-1.496-.895-.798-1.5-1.783-1.675-2.083-.175-.301-.019-.464.132-.614.135-.135.301-.351.451-.527.151-.176.201-.301.301-.502.1-.201.05-.376-.025-.527-.075-.151-.675-1.631-.925-2.235-.243-.587-.491-.507-.675-.516-.174-.008-.375-.01-.576-.01s-.527.075-.802.376c-.275.301-1.053 1.028-1.053 2.508s1.078 2.91 1.228 3.111c.151.201 2.122 3.241 5.14 4.544.718.311 1.279.496 1.716.635.721.23 1.377.198 1.896.121.578-.087 1.781-.727 2.031-1.43.25-.702.25-1.305.175-1.43-.075-.125-.275-.199-.576-.35z"/></svg>
+    </a>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-badge reveal">Strategic Financial Guardians</div>
+                <h1 class="reveal">Financial <span>Clarity.</span><br>Business <span>Growth.</span></h1>
+                <p class="reveal">Empowering businesses with precision-driven GST, Tax, and compliance solutions. We handle the complexity, you drive the innovation.</p>
+                <div class="hero-actions reveal">
+                    <a href="#contact" class="btn btn-fill">Get Started Now</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <span class="section-tag reveal">Professional Excellence</span>
+                <h2 class="section-title reveal">Full-Spectrum Financial Solutions</h2>
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-icon">🏛️</div>
+                        <h3>GST Compliance</h3>
+                        <p>End-to-end management of GST filings, ensuring absolute statutory accuracy and efficiency.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon">📉</div>
+                        <h3>Income Tax Strategy</h3>
+                        <p>Sophisticated tax planning and filing for high-impact individuals and corporate entities.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon">📋</div>
+                        <h3>Corporate Affairs</h3>
+                        <p>ROC compliances, statutory documentation, and corporate advisory with absolute precision.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon">🔍</div>
+                        <h3>Assurance & Audit</h3>
+                        <p>Meticulous internal auditing designed to safeguard your business's financial integrity.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon">👥</div>
+                        <h3>Payroll & ESI/EPF</h3>
+                        <p>Precise handling of employee benefit frameworks, securing your workforce's future.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon">📈</div>
+                        <h3>Strategic Capital</h3>
+                        <p>Professional project analysis and high-caliber proposals for banking and loan growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content reveal">
+                        <span class="section-tag">25+ Years of Legacy</span>
+                        <h2>Precision & <span>Integrity.</span></h2>
+                        <p>With over 25 years of proven experience in accounting, finance, and administrative management, we bring deep industry expertise and a commitment to financial excellence.</p>
+                        <p>Our work is rooted in precision and reliability—delivering end-to-end accounting solutions tailored to business needs.</p>
+                        
+                        <div class="experience-badge">
+                            <span class="number">25+</span>
+                            <span class="text">Years of Proven <br>Financial Mastery</span>
+                        </div>
+                    </div>
+                    <div class="about-specialties reveal">
+                        <h3>Core Specializations</h3>
+                        <ul class="specialty-list">
+                            <li><span>01</span> Financial Statement & Analysis</li>
+                            <li><span>02</span> GST & Income Tax Compliance</li>
+                            <li><span>03</span> Payroll, ESI, and EPF Management</li>
+                            <li><span>04</span> Accounts Payable/Receivable</li>
+                            <li><span>05</span> Audit Coordination & Control</li>
+                            <li><span>06</span> Operational Finance Management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-mission reveal">
+                    <div class="mission-box">
+                        <span class="section-tag">The Approach</span>
+                        <h3>Clear Processes. Dependable Execution.</h3>
+                        <p>Having served extensively in the manufacturing sector, we understand the complexities of business operations and provide structured financial systems that support growth.</p>
+                        <p><strong>Our approach is simple: clear processes, accurate reporting, and dependable execution.</strong></p>
+                        <p>We aim to build long-term trust by helping businesses maintain financial discipline and operate with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <h2>Start Your Journey.</h2>
+                    <p>Connect with our senior partners for a confidential discussion about your financial needs.</p>
+                    <div class="hero-actions">
+                        <a href="tel:9944876740" class="btn btn-outline" style="background: white; border: none; font-size: 1.5rem;">99448 76740</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 2rem;">Loganayaki<span>.</span></a>
+                    <p style="color: var(--text-muted); max-width: 400px;">Architecting financial compliance and strategic growth for the modern business landscape since 2000.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Ecosystem</h4>
+                    <ul>
+                        <li><a href="#services">Our Expertise</a></li>
+                        <li><a href="#about">The Heritage</a></li>
+                        <li><a href="#contact">Contact Desk</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Direct Support</h4>
+                    <ul>
+                        <li><a href="tel:9944876740">99448 76740</a></li>
+                        <li><a href="tel:9894795180">98947 95180</a></li>
+                        <li><p style="color: var(--text-muted);">Coimbatore, India</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Sri Loganayaki Clear Filing Solutions. Defined by Infinite Precision.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // Mobile Navigation Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.innerText = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerText = '☰';
+            });
+        });
+
+        // Reveal Logic
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.95) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>
